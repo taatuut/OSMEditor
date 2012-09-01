@@ -1,7 +1,22 @@
 .user {
 font-style: italic;
+font-size: 24px;
 }
 
-thead {
-font-style: bold;
+table.tags
+{
+border-collapse:collapse;
+}
+table.tags, th, td
+{
+border: 1px solid black;
+}
+table.tags th
+{
+padding:2px;
+font-weight:bold;
+}
+table.tags td
+{
+padding:2px;
 }

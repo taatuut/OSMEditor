@@ -49,7 +49,7 @@ return
 </td></tr>
 }</table>
 <a href="updatehamburg-form.xqy">Update Tags</a>
-<input type="button" value="Show on map" onclick="showMap({ string($node/@id) }, { string($node/@lat) }, { string($node/@lon) });" ></input>
+<input type="button" value="Show on map" id="showonmap" onclick="showOnMap({ string($node/@id) }, { string($node/@lat) }, { string($node/@lon) });" ></input>
 </div>
 }
 <div id="map"></div>
