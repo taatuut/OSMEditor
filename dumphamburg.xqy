@@ -17,6 +17,7 @@ declare namespace hb = "http://www.marklogic.com/ns/osm-hamburg";
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/ui/extensions/ui.tabs.paging.js"></script>
 <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+<script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
 <script type="text/javascript" src="js/osmeditor.js"></script>
 </head>
 <body>
@@ -37,19 +38,24 @@ return
 for $node in doc("hamburg.xml")/hb:hamburg/hb:node
 return
 <div id="{ string($node/@id) }">
-<div class="user">{ string($node/@user) }</div>
+<div class="nonedit">{ string($node/@user) }</div>
+<div id="tableholder">
 <table id="table{ string($node/@id) }" class="tags">
 <thead><tr><th>Key</th><th>Value</th></tr></thead>
-{for $tag in $node/hb:tag
+{
+for $tag in $node/hb:tag
 return
-<tr><td>
+<tr><td class="nonedit">
 { string($tag/@k) }
-</td><td>
+</td><td class="edit">
 { string($tag/@v) }
 </td></tr>
-}</table>
-<a href="updatehamburg-form.xqy">Update Tags</a>
-<input type="button" value="Show on map" id="showonmap" onclick="showOnMap({ string($node/@id) }, { string($node/@lat) }, { string($node/@lon) });" ></input>
+}
+</table>
+<a href="updatehamburg-form.xqy" osmid="{ string($node/@id) }" >Update Tags</a>
+</div>
+<input type="button" value="Update tags" class="updatetags" osmid="{ string($node/@id) }" ></input>
+<input type="button" value="Show on map" class="showonmap" osmid="{ string($node/@id) }" osmlat="{ string($node/@lat) }" osmlon ="{ string($node/@lon) }" ></input>
 </div>
 }
 <div id="map"></div>
