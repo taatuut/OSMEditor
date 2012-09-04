@@ -21,7 +21,6 @@ declare namespace hb = "http://www.marklogic.com/ns/osm-hamburg";
 <script type="text/javascript" src="js/osmeditor.js"></script>
 </head>
 <body>
-<h1>MarkLogic OSM Editor - Display</h1>
 <div id="example">
 <ul class="tabs">
 {
@@ -52,10 +51,14 @@ return
 </td></tr>
 }
 </table>
+<!--
 <a href="updatehamburg-form.xqy" osmid="{ string($node/@id) }" >Update Tags</a>
+-->
 </div>
-<input type="button" value="Update tags" class="updatetags" osmid="{ string($node/@id) }" ></input>
+<p>
 <input type="button" value="Show on map" class="showonmap" osmid="{ string($node/@id) }" osmlat="{ string($node/@lat) }" osmlon ="{ string($node/@lon) }" ></input>
+<input type="button" value="Update tags" class="updatetags" osmid="{ string($node/@id) }" ></input>
+</p>
 </div>
 }
 <div id="map"></div>

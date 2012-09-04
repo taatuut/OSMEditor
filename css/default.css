@@ -2,3 +2,17 @@
 font-family:arial,verdana;
 font-size:11pt;
 }
+#fixed-tr {
+position: fixed;
+top: 1em;
+right: 1em;
+width:40%;
+padding:8px;
+background-color: #abcdef;
+margin:0px auto;
+text-align: right;
+opacity:0.8;
+filter:alpha(opacity=80); /* For IE8 and earlier */
+z-index:99999;
+border:1px #0000ff solid;
+}

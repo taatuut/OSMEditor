@@ -7,15 +7,57 @@ declare namespace hb = "http://www.marklogic.com/ns/osm-hamburg";
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.snippet.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/snippet/jquery.snippet.min.js"></script>
+<script type="text/javascript" src="http://www.conflictresolution.colostate.edu/data/sites/1/skins/crscs-nobg/js/jquery.corner.js"></script>
 <script type="text/javascript" src="js/default.js"></script>
 </head>
 <body>
+<div id="fixed-tr">
+<hr/>
+<hr/>
+<h4>
+Time to show what it does
+</h4>
+<ol dir="rtl">
+<li>
+<a href="loadhamburg.xqy" target="_blank">
+Load sample OpenStreetmap data set for city of Hamburg, Germany
+</a>
+</li>
+<li>
+<a href="dumphamburg.xqy" target="_blank">
+Display all nodes data from sample data set, show on map and edit OpenStreetmap tags
+</a>
+</li>
+<li>
+<a href="" target="_blank">
+</a>
+Search the data first instead of displaying all - way too much in real OpenStreetMap life
+</li>
+<li>
+<a href="" target="_blank">
+</a>
+Same display and edit functionality for ways and relations
+</li>
+</ol>
+</div>
 <h1>
 MarkLogic OSM Editor - Introduction
 </h1>
 <p>
-This is my personal test project using MarkLogic to edit OpenStreetmap data. The first version focuses on displaying and querying the data, both relational and spatial. Updating information is possible too. The data used is a tiny piece of the total OpenStreetmap database and I'm not making changes on any real data (yet).
+This is my personal test project using MarkLogic to edit OpenStreetmap data.<br/>
+The first version focuses on displaying and querying the data, both relational and spatial.<br/>
+Updating information is possible too.<br/>
+The data used is a tiny piece of the total OpenStreetmap database and I'm not making changes on any real data (yet).
+</p>
+<p>
+<h4>
+How does it look?
+</h4>
+</p>
+<p>
+<img src="images/mlosmeditor1.png" />
 </p>
 <p>
 <h4>
@@ -24,6 +66,11 @@ Possible enhancements
 </p>
 <p>
 Too much to note right now.
+<!--
+But I'd like to add the following:
+Heatmap
+MarkLogic xquery paging
+-->
 </p>
 <p>
 <h4>
@@ -31,34 +78,7 @@ Why this OpenStreetmap editor?
 </h4>
 </p>
 <p>
-OpenStreetmap database is quite large, about 3000 GB currently [link]. OpenStreetmap data is in XML format. Sounds like a good candidate for MarkLogic database capable of handling any data, at any volume, in any structure.
-</p>
-<p>
-<h4>
-Time to show what it does
-</h4>
-<ul>
-<li>
-<a href="loadhamburg.xqy" target="_blank">
-Load sample data set (small part of OpenStreetmap for city of Hamburg, Germany).
-</a>
-</li>
-<li>
-<a href="dumphamburg.xqy" target="_blank">
-Display all nodes data from sample data set, includes functionality to display on the map and edit OpenStreetmap tags.
-</a>
-</li>
-<li>
-<a href="" target="_blank">
-</a>
-Search the data instead of displaying all (that would be way too much in real life).
-</li>
-<li>
-<a href="" target="_blank">
-</a>
-Same display and edit functionality for ways and relations.
-</li>
-</ul>
+OpenStreetmap database is quite large, over <a href="http://wiki.openstreetmap.org/wiki/Planet.osm" target="_blank">250 GB</a> currently. OpenStreetmap data is in XML format. Sounds like a good candidate for MarkLogic database capable of handling any data, at any volume, in any structure.
 </p>
 <p>
 <h4>
@@ -75,16 +95,24 @@ Software and data used
 </h4>
 <ul>
 <li>
-MarkLogic
+MarkLogic 5.0-3.3
 </li>
 <li>
-OpenStreetMap data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>
+OpenStreetMap, Leaflet &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>
+<!--
+http://leaflet.cloudmade.com/
+-->
 </li>
 <li>
-jQuery, jQuery UI, Jeditable, jquery-ui-tabs-paging, Snippet
-</li>
-<li>
-Leaflet
+jQuery, jQuery UI, Jeditable, jquery-ui-tabs-paging, Snippet, jQuery Corner
+<!--
+http://jquery.com/
+http://jqueryui.com/
+http://www.appelsiini.net/projects/jeditable
+http://code.google.com/p/jquery-ui-tabs-paging/
+http://www.steamdev.com/snippet/
+https://github.com/malsup/corner
+-->
 </li>
 </ul>
 </p>
