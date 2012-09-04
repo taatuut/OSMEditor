@@ -21,7 +21,7 @@ declare namespace hb = "http://www.marklogic.com/ns/osm-hamburg";
 <script type="text/javascript" src="js/osmeditor.js"></script>
 </head>
 <body>
-<h1>MarkLogic OSM Editor</h1>
+<h1>MarkLogic OSM Editor - Display</h1>
 <div id="example">
 <ul class="tabs">
 {

@@ -533,10 +533,10 @@ xdmp:document-insert("hamburg.xml",
 ),
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Database loaded</title>
+<title>MarkLogic OSM Editor - Sample OpenStreetMap data set loaded</title>
 </head>
 <body>
 <b>Source XML Loaded</b>
-<p>The source XML has been successfully loaded into the database</p>
+<p>The sample OpenStreetMap data set has been successfully loaded into the MarkLogic database</p>
 </body>
 </html>
