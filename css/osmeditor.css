@@ -19,3 +19,8 @@ table.tags td
 {
 padding:2px;
 }
+
+#map {
+height: 480px;
+width: 640px;
+}

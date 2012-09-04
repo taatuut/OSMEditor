@@ -6,10 +6,10 @@ declare namespace hb = "http://www.marklogic.com/ns/osm-hamburg";
 <title>MarkLogic OSM Editor - Introduction</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.snippet.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/snippet/jquery.snippet.min.js"></script>
-<script type="text/javascript" src="http://www.conflictresolution.colostate.edu/data/sites/1/skins/crscs-nobg/js/jquery.corner.js"></script>
+<script type="text/javascript" src="js/jquery.corner.js"></script>
 <script type="text/javascript" src="js/default.js"></script>
 </head>
 <body>
