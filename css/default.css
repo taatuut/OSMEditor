@@ -16,3 +16,12 @@ filter:alpha(opacity=80); /* For IE8 and earlier */
 z-index:99999;
 border:1px #0000ff solid;
 }
+#xmldisplay {
+width:640px;
+height:480px;
+border:none;
+display:none;
+}
+#hdata {
+display:none;
+}
