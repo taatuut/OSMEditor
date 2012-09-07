@@ -32,10 +32,10 @@ marker.bindPopup(tableHtml).openPopup();
 });
 
 $(".updatetags").bind("click", function() {
-var id = $(this).attr("osmid");
-var tableId = '#table'+id;
-$(tableId).css({'border': '2px red solid'});
-$(tableId + ' td.edit').editable();
+	var id = $(this).attr("osmid");
+	var tableId = '#table'+id;
+	//$(tableId).css({'border': '2px red solid'});
+	$(tableId + ' td.edit').editable('updatehamburg-writeditable.xqy');
 });
 
 });

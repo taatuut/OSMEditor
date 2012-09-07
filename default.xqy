@@ -31,9 +31,14 @@ Display all nodes data from sample data set, show on map and edit OpenStreetmap 
 </a>
 </li>
 <li>
-<a href="" target="_blank">
+<a href="updatehamburg-form.xqy" target="_blank">
+Tag update test
 </a>
+</li>
+<li>
+<a href="spatialsearchhamburg.xqy" target="_blank">
 Search the data first instead of displaying all - way too much in real OpenStreetMap life
+</a>
 </li>
 <li>
 <a href="" target="_blank">
@@ -113,6 +118,9 @@ http://code.google.com/p/jquery-ui-tabs-paging/
 http://www.steamdev.com/snippet/
 https://github.com/malsup/corner
 -->
+</li>
+<li>
+Notepad++
 </li>
 </ul>
 </p>

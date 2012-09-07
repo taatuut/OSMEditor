@@ -36,7 +36,10 @@ return
 for $node in doc("hamburg.xml")/hb:hamburg/hb:node
 return
 <div id="{ string($node/@id) }">
-<div class="nonedit">{ string($node/@user) }</div>
+<h4 class="nonedit">
+User:
+{ string($node/@user) }
+</h4>
 <div id="tableholder">
 <table id="table{ string($node/@id) }" class="tags">
 <thead><tr><th>Key</th><th>Value</th></tr></thead>
@@ -45,7 +48,7 @@ for $tag at $pos in $node/hb:tag
 return
 <tr><td class="nonedit">
 { string($tag/@k) }
-</td><td class="edit" nodeid="{ string($node/@id) }" tagpos="{ string($pos) }">
+</td><td class="edit" id="{ string($node/@id) }_{ string($pos) }_{ string($tag/@k) }">
 { string($tag/@v) }
 </td></tr>
 }
@@ -60,6 +63,9 @@ return
 </p>
 </div>
 }
+<!--
+todo: map does not show zoomin/out images anymore, fix!
+-->
 <div id="map"></div>
 </div>
 </body>

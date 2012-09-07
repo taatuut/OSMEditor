@@ -24,3 +24,10 @@ padding:2px;
 height: 480px;
 width: 640px;
 }
+h4 { 
+font-size: 14pt;
+color:#8cc68b;
+}
+#tableholder  {
+margin:10px;
+}
