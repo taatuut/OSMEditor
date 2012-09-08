@@ -22,7 +22,7 @@ Time to show what it does
 <ol dir="rtl">
 <li>
 <a href="loadhamburg.xqy" target="_blank">
-Load sample OpenStreetmap data set for city of Hamburg, Germany
+Load sample of OpenStreetmap data set city of Hamburg, Germany
 </a>
 </li>
 <li>
@@ -31,19 +31,27 @@ Display all nodes data from sample data set, show on map and edit OpenStreetmap 
 </a>
 </li>
 <li>
-<a href="updatehamburg-form.xqy" target="_blank">
-Tag update test
-</a>
-</li>
-<li>
 <a href="spatialsearchhamburg.xqy" target="_blank">
-Search the data first instead of displaying all - way too much in real OpenStreetMap life
+Display geospatial search results in heatmap
+<!-- would be way too much with real OpenStreetMap data set -->
+</a>
+<li>
+<a href="simplesearchhamburg.xqy" target="_blank">
+Search the data for specific user
 </a>
 </li>
+</li>
+<!--
 <li>
-<a href="" target="_blank">
+<a href="updatehamburg-form.xqy" target="_blank">
+Test to update node in OpenStreetMap data
 </a>
-Same display and edit functionality for ways and relations
+</li>
+-->
+<li>
+<a href="http://localhost:8006" target="_blank">
+Aplication Builder Application - testOscar1
+</a>
 </li>
 </ol>
 </div>
@@ -89,10 +97,50 @@ OpenStreetmap database is quite large, over <a href="http://wiki.openstreetmap.o
 <h4>
 Statistics
 </h4>
-There are currently xxx objects in the sample OpenStreetmap datab set used in this application:<br/>
-xxx nodes<br/>
-xxx ways<br/>
-xxx relations<br/>
+<!--
+declare namespace hb="http://www.marklogic.com/ns/osm-hamburg";
+<result>
+  <node_count>{ count(doc("hamburg.xml")//hb:node) }</node_count>
+  <way_count>{ count(doc("hamburg.xml")//hb:way) }</way_count>
+  <relation_count>{ count(doc("hamburg.xml")//hb:relation) }</relation_count>
+  <tag_count>{ count(doc("hamburg.xml")//hb:tag) }</tag_count>
+</result>
+322,4,5,187
+
+<result>
+  <node_count>{ xdmp:estimate(doc("hamburg.xml")//hb:node) }</node_count>
+  <way_count>{ xdmp:estimate(doc("hamburg.xml")//hb:way) }</way_count>
+  <relation_count>{ xdmp:estimate(doc("hamburg.xml")//hb:relation) }</relation_count>
+  <tag_count>{ xdmp:estimate(doc("hamburg.xml")//hb:tag) }</tag_count>
+</result>
+1,1,1,1
+
+xdmp:estimate says 1,1,1,1 because no index yet?
+-->
+The following spatial objects exist in the sample OpenStreetmap data set:<br/>
+<ul>
+<li>
+<span class="emp">
+{ count(doc("hamburg.xml")//hb:node) }
+</span>
+ nodes<br/>
+</li>
+<li>
+<span class="emp">
+{ count(doc("hamburg.xml")//hb:way) }
+</span>
+ ways<br/>
+</li>
+<li>
+<span class="emp">
+{ count(doc("hamburg.xml")//hb:relation) }
+</span>
+ relations<br/>
+</li>
+</ul>
+These objects have a total of <span class="emp">
+{ count(doc("hamburg.xml")//hb:tag) }
+</span> tags.
 </p>
 <p>
 <h4>

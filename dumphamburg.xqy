@@ -42,7 +42,7 @@ User:
 </h4>
 <div id="tableholder">
 <table id="table{ string($node/@id) }" class="tags">
-<thead><tr><th>Key</th><th>Value</th></tr></thead>
+<thead><tr><th>Key</th><th>Value</th></tr></thead><tbody>
 {
 for $tag at $pos in $node/hb:tag
 return
@@ -52,7 +52,7 @@ return
 { string($tag/@v) }
 </td></tr>
 }
-</table>
+</tbody></table>
 <!--
 <a href="updatehamburg-form.xqy" osmid="{ string($node/@id) }" >Update Tags</a>
 -->
@@ -60,6 +60,7 @@ return
 <p>
 <input type="button" value="Show on map" class="showonmap" osmid="{ string($node/@id) }" osmlat="{ string($node/@lat) }" osmlon ="{ string($node/@lon) }" ></input>
 <input type="button" value="Update tags" class="updatetags" osmid="{ string($node/@id) }" ></input>
+<input type="button" value="Add tag" class="addtag" osmid="{ string($node/@id) }"></input>
 </p>
 </div>
 }

@@ -22,6 +22,13 @@ height:480px;
 border:none;
 display:none;
 }
+#userxmldisplay {
+width:800px;
+height:640px;
+}
 #hdata {
 display:none;
+}
+.emp {
+font-weight:bold;
 }

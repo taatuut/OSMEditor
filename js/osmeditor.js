@@ -24,7 +24,7 @@ var id = $(this).attr("osmid");
 var lat = $(this).attr("osmlat");
 var lon = $(this).attr("osmlon");
 var tableId = '#table'+id;
-$(tableId + ' td').attr('class', 'edit');
+//$(tableId + ' td').attr('class', 'edit');
 var tableHtml = $(tableId).parent().html();
 map.panTo([lat, lon]);
 var marker = L.marker([lat, lon]).addTo(map);
@@ -36,6 +36,12 @@ $(".updatetags").bind("click", function() {
 	var tableId = '#table'+id;
 	//$(tableId).css({'border': '2px red solid'});
 	$(tableId + ' td.edit').editable('updatehamburg-writeditable.xqy');
+});
+
+$(".addtag").bind("click", function() {
+var id = $(this).attr("osmid");
+var tableId = '#table'+id;
+$(tableId + ' > tbody:first').append('<tr><td class="nonedit">custom</td><td class="edit" id="' + id + '"></td></tr>'); 
 });
 
 });

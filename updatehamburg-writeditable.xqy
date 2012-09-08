@@ -11,17 +11,23 @@ let $key := $tokens[3]
 let $value := xdmp:get-request-field("value")
 let $tag := doc("hamburg.xml")/hb:hamburg/hb:node[@id = $id]/hb:tag[string(position()) = $pos]
 return
-if ($tag) then
-(xdmp:node-replace($tag,<hb:tag>{ attribute k {$key}, attribute v {$value} }</hb:tag>),$value)
-else
-<span>Could not locate node with id { $id }.</span>
+	if ($tag) then
+		(
+		fn:normalize-space($value),
+		xdmp:node-replace($tag,<hb:tag>{ attribute k {$key}, attribute v {$value} }</hb:tag>)
+		)
+	else
+		(
+		if (fn:string-length($pos) < 1) then
+			(
+			fn:normalize-space($value),
+			xdmp:node-insert-child(doc("hamburg.xml")/hb:hamburg/hb:node[@id = $id],<hb:tag>{ attribute k {"custom"}, attribute v {$value} }</hb:tag>)
+			)
+		else
+			(
+			<span>no node with id { $id }.</span>
+			)
+		)
 else
 <span>Unable to access parent XML document.</span>
-};
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-</head>
-<body>
-{local:updateTag()}
-</body>
-</html>
+};local:updateTag()
