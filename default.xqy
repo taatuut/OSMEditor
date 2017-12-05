@@ -148,7 +148,7 @@ Software and data used
 </h4>
 <ul>
 <li>
-MarkLogic 5.0-3.3
+Initially created for MarkLogic 5.0-3.3, runs on MarkLogic 9 too :-)
 </li>
 <li>
 OpenStreetMap, Leaflet &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>

@@ -46,13 +46,16 @@ let $r := cts:search(doc("hamburg.xml")//hb:hamburg/hb:node,
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>MarkLogic OSM Editor - Spatial search  OpenStreetMap data set</title>
-<link rel="stylesheet" href="http://leaflet.cloudmade.com/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+  crossorigin=""/>
 <link rel="stylesheet" type="text/css" href="css/default.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="http://leaflet.cloudmade.com/dist/leaflet.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/heatcanvas.js"></script>
-<script type="text/javascript" src="js/heatcanvas-leaflet.js"></script>
-<script type="text/javascript" src="js/heatmap.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+  crossorigin=""></script>
 <script type="text/javascript">
 var viewlat = {local:llclat()} + ({local:urclat()} - {local:llclat()})/2;
 var viewlon = {local:llclon()} + ({local:urclon()} - {local:llclon()})/2;
@@ -61,9 +64,6 @@ var viewlon = {local:llclon()} + ({local:urclon()} - {local:llclon()})/2;
 <body>
 {local:nodesearch()}
 <div id="map" style="width:850px; height:500px;"></div>
-<!--
-leaflet heatmap from http://sunng87.github.com/heatcanvas/leaflet.html
--->
 <form id="frmBoundingBox" action="" method="post">
 LLC LAT <input type="text" id="llclat" name="llclat" value="{local:llclat()}"/>
 <br/>
@@ -75,5 +75,8 @@ URC LON <input type="text" id="urclon" name="urclon" value="{local:urclon()}" />
 <input type="submit" value="Set Bounding Box" />
 </form>
 <div id="hdata"></div>
+<script src="js/heatmap.js"></script>
+<script src="js/heatmap.min.js"></script>
+<script src="js/leaflet-heatmap.js"></script>
 </body>
 </html>
